@@ -16,6 +16,7 @@
     "gulp-watch": "^4.2.3"
   },
   "devDependencies": {
-    "gulp-jsmin": "^0.1.4"
+    "gulp-jsmin": "^0.1.4",
+    "gulp-uglyfly": "^1.4.2"
   }
 }
