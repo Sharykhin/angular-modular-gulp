@@ -26,5 +26,10 @@ App.config(function($stateProvider, $urlRouterProvider) {
       controller: function($scope) {
         $scope.things = ["A", "Set", "Of", "Things"];
       }
+    })
+    .state('users',{
+        url: "/users",
+        templateUrl: "modules/user/views/user.html",
+        controller: 'UserController'
     });
 });
