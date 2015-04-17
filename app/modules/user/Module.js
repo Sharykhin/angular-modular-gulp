@@ -1,1 +1,1 @@
-var UserModule = angular.module('User',[]);
+APP.UserModule = angular.module('User',[]);

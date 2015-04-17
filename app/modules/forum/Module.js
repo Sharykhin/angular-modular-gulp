@@ -1,0 +1,1 @@
+APP.ForumModule = angular.module('Forum',[]);
