@@ -1,8 +1,8 @@
 Requirements:
 ------------
 
-npm
-gulp
+* npm
+* gulp
 
 Installation:
 -------------
