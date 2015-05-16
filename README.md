@@ -1,8 +1,10 @@
 Requirements:
 ------------
 
+* node
 * npm
 * gulp
+
 
 Installation:
 -------------
