@@ -7,7 +7,7 @@ var uglyfly = require('gulp-uglyfly');
 var filelog = require('gulp-filelog');
 var copy = require( 'gulp-contrib-copy' );
 
-gulp.task('serve',['scripts.vendor','scripts.app','templates','watch'],function(){
+gulp.task('serve',['scripts.vendor','scripts.app','default_templates','modules_templates','watch'],function(){
 	var server = gls.static('public');
 	server.start();
 	gulp.watch(['./app/**/*.js'],server.start);
@@ -16,7 +16,8 @@ gulp.task('serve',['scripts.vendor','scripts.app','templates','watch'],function(
 gulp.task('watch',function(){
 	watch('app/**/*.js',function(){		
 		gulp.start('scripts.app');
-		gulp.start('templates');
+		gulp.start('default_templates');
+		gulp.start('modules_templates');
 	});
 });
 
@@ -45,10 +46,17 @@ gulp.task('scripts.vendor',function(){
 });
 
 
-gulp.task('templates',function(){
-	gulp.src('./app/views/*.html')
+gulp.task('default_templates',function(){
+	return gulp.src('./app/views/*.html')
 		.pipe(copy({log:true}))
-		.pipe(gulp.dest('./public/views/'))
+		.pipe(gulp.dest('./public/views/'));
+	
+});
+
+gulp.task('modules_templates', function(){
+	return gulp.src('./app/modules/**/*.html')
+		.pipe(copy({log:true}))
+		.pipe(gulp.dest('./public/modules/'));
 });
 
 

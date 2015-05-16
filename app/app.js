@@ -1,4 +1,5 @@
 'use strict';
-            
-var App = angular.module('App',['User','ui.router']);
+var APP = {};
+
+APP.MainModule = angular.module('App',['User','Forum','ui.router']);
 

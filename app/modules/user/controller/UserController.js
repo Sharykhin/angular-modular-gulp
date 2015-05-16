@@ -1,6 +1,7 @@
-var UserModule = angular.module('User',[]);
-UserModule.controller('UserController',['$scope',function($scope){
+APP.UserModule.controller(APP.UserModule.name + '.UserController',['$scope','sayHello',function($scope,sayHello){
 
 	$scope.name='John';
+	sayHello.SayHello($scope.name);
+	console.log(APP.UserModule.name);
 
 }]);

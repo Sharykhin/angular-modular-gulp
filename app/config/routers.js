@@ -1,4 +1,4 @@
-App.config(function($stateProvider, $urlRouterProvider) { 
+APP.MainModule.config(function($stateProvider, $urlRouterProvider) { 
   //
   // For any unmatched url, redirect to /state1
   $urlRouterProvider.otherwise("/state1");
@@ -26,5 +26,15 @@ App.config(function($stateProvider, $urlRouterProvider) {
       controller: function($scope) {
         $scope.things = ["A", "Set", "Of", "Things"];
       }
+    })
+    .state('users',{
+        url: "/users",
+        templateUrl: "modules/user/views/user.html",
+        controller: 'UserController'
+    })
+    .state('forum',{
+      url: "/forum",
+      templateUrl: "modules/forum/views/forum.html",
+      controller: 'User.DefaultController'
     });
 });

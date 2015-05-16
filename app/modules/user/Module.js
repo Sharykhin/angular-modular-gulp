@@ -1,0 +1,1 @@
+APP.UserModule = angular.module('User',[]);
